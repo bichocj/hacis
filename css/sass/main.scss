@@ -224,7 +224,7 @@ section {
   }
 }
 /* NOSOTROS */
-section#nosotrosSection {
+#seccionNosotros {
   @include clearfix;
   .mision,
   .vision,
@@ -245,7 +245,7 @@ section#nosotrosSection {
   }  
 }
 /* PROYECTOS */
-section#proyectosSection {
+#seccionProyectos {
   background-color: $bg-gris;
 }
 .galeria-proyectos {
@@ -319,7 +319,7 @@ section#proyectosSection {
 }
   
 /* CONTACTO */
-section#contactoSection {
+#seccionContacto {
   background-color: $bg-azul;
   color: $color-font-white;
   form {

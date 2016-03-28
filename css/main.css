@@ -166,31 +166,31 @@ section h3, section h2 {
   margin-bottom: 1em; }
 
 /* NOSOTROS */
-section#nosotrosSection:after {
+#seccionNosotros:after {
   content: "";
   display: table;
   clear: both; }
-section#nosotrosSection .mision,
-section#nosotrosSection .vision,
-section#nosotrosSection .valores {
+#seccionNosotros .mision,
+#seccionNosotros .vision,
+#seccionNosotros .valores {
   width: 33.333%;
   float: left;
   text-align: center;
   font-size: 0.9em;
   padding: 0 65px; }
-  section#nosotrosSection .mision i,
-  section#nosotrosSection .vision i,
-  section#nosotrosSection .valores i {
+  #seccionNosotros .mision i,
+  #seccionNosotros .vision i,
+  #seccionNosotros .valores i {
     font-size: 30px; }
-  section#nosotrosSection .mision h3,
-  section#nosotrosSection .vision h3,
-  section#nosotrosSection .valores h3 {
+  #seccionNosotros .mision h3,
+  #seccionNosotros .vision h3,
+  #seccionNosotros .valores h3 {
     text-transform: uppercase;
     margin: 0.5em 0 1em;
     font-size: 24px; }
 
 /* PROYECTOS */
-section#proyectosSection {
+#seccionProyectos {
   background-color: #f5f5f5; }
 
 .galeria-proyectos:after {
@@ -269,22 +269,22 @@ section#proyectosSection {
     width: 100%; }
 
 /* CONTACTO */
-section#contactoSection {
+#seccionContacto {
   background-color: #3F6DA9;
   color: #fafafa; }
-  section#contactoSection form {
+  #seccionContacto form {
     width: 50%;
     min-width: 550px;
     margin: 0 auto; }
-    section#contactoSection form p {
+    #seccionContacto form p {
       margin-bottom: 0.5em; }
-      section#contactoSection form p:after {
+      #seccionContacto form p:after {
         content: "";
         display: table;
         clear: both; }
-    section#contactoSection form label, section#contactoSection form input, section#contactoSection form textarea {
+    #seccionContacto form label, #seccionContacto form input, #seccionContacto form textarea {
       float: left; }
-    section#contactoSection form label {
+    #seccionContacto form label {
       width: 30%;
       text-transform: uppercase;
       text-align: right;
@@ -292,15 +292,15 @@ section#contactoSection {
       padding-right: 30px;
       line-height: 2em;
       font-size: 0.9em; }
-    section#contactoSection form input, section#contactoSection form textarea {
+    #seccionContacto form input, #seccionContacto form textarea {
       width: 70%;
       border: 1px solid #eee;
       border-radius: 4px;
       box-shadow: inset 0px 0px 5px #ccc; }
-    section#contactoSection form input {
+    #seccionContacto form input {
       height: 36px;
       padding: 0.5em 1em; }
-    section#contactoSection form input[type="submit"] {
+    #seccionContacto form input[type="submit"] {
       margin-left: 30%;
       background-color: #74CBB5;
       border: none;
