@@ -1,6 +1,29 @@
+/* RESPONSIVE MEDIA QUERIES*/
 //Variables
-$breakpoint-tablet : max-width 992px ;
-$breakpoint-small-device: max-width 768px;
-$breakpoint-mobile: max-width 640px;
-$breakpoint-small-mobile: max-width 767px;
-/* For Medium Devices*/
+$breakpoint-tablet : 992px ;
+$breakpoint-small-device: 768px;
+$breakpoint-mobile: 640px;
+$breakpoint-small-mobile: 767px;
+
+
+/* For Tablet*/
+@media screen and (max-width: $breakpoint-tablet) {
+  section#nosotrosSection {
+    .mision,
+    .vision,
+    .valores {
+      margin-top: 45px;
+    }
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: $breakpoint-small-device) {
+  section#nosotrosSection {
+    .mision,
+    .vision,
+    .valores {
+      width: 100%;
+    }
+  }
+}
