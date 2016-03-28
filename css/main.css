@@ -110,7 +110,7 @@ div.hero {
         letter-spacing: 1px;
         transition: all 0.15s ease-in; }
         div.hero .nav-container ul a:hover {
-          background-color: #99d9c9;
+          background-color: #78ccb7;
           color: #fafafa;
           text-shadow: 1px 0px 1px #333; }
         div.hero .nav-container ul a.active {
