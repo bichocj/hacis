@@ -224,9 +224,8 @@ section {
   }
 }
 /* NOSOTROS */
-section#nosotros {
+section#nosotrosSection {
   @include clearfix;
-  padding: 45px 0;
   .mision,
   .vision,
   .valores {
@@ -246,7 +245,7 @@ section#nosotros {
   }  
 }
 /* PROYECTOS */
-section#proyectos {
+section#proyectosSection {
   background-color: $bg-gris;
 }
 .galeria-proyectos {
@@ -320,7 +319,7 @@ section#proyectos {
 }
   
 /* CONTACTO */
-section#contacto {
+section#contactoSection {
   background-color: $bg-azul;
   color: $color-font-white;
   form {
@@ -424,3 +423,4 @@ footer {
   }
 }
 
+@import "responsive";

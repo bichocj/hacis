@@ -28,3 +28,14 @@ window.addEventListener('scroll', function (e) {
         menu.classList.remove('fixed');
     }
 });
+
+/* Scrolling Page with JQuery*/
+    $('.nav-container ul a').click(function (e) {
+        //alert("btn ID " + e.currentTarget.id);
+        e.preventDefault();
+        var SectionID = e.currentTarget.id+ "Section";
+        
+        $('html body').animate({
+            scrollTop: $("#" + SectionID).offset().top
+        }, 1000);
+    });
