@@ -1,0 +1,426 @@
+/* {
+  outline: 2px solid rgba(0, 0, 255, .3)
+}
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+//SFFourche
+@font-face {
+  font-family: "SFFourche";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/SFFourche.ttf") format("truetype")
+}
+@font-face {
+  font-family: "SFFourche";
+  //font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/SFFourcheBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SFFourche";
+   //src: url("fuentefancy.eot");
+  //font-style: normal;
+  font-weight: lighter;
+  src: url("../fonts/SFFourcheCondensed.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFFourcheSC";
+  //font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/SFFourcheSC.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SFFourcheSC";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/SFFourcheSCItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeueThin.ttf') format('truetype');
+  //font-weight: lighter;
+  font-style: normal;
+}
+
+/* Variables */
+$font-headings: "SFFourche", Arial, sans-serif;
+$font-paragraphs: "HelveticaNeue", Helvetica, "Arial Narrow", sans-serif;
+
+$color-azul: #3F6DA9 ;
+$color-turquesa:  #74CBB5 ;
+$color-font-primary: #666;
+$color-font-black: #333;
+$color-font-white: #fafafa;
+$color-font-white-opac: #efefef;
+
+$bg-black: #333;
+$bg-gris: #f5f5f5;
+$bg-azul: $color-azul;
+$bg-white: #fff;
+/* Mixins */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+/* Estilos Generales */
+
+body {
+  font-family: $font-paragraphs;
+  font-weight: lighter;
+  color: $color-font-primary;
+  line-height: 1.5em;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $font-headings;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0 0 24px 0;
+  height: 0;
+  width: 90%;
+  margin: auto;
+}
+
+
+/* HERO */
+div.hero {
+  width: 100%;
+  height: 100vh;
+  background-color:#3F6DA9 ;
+  display: table;
+  #menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: $bg-white;
+    z-index: 100;
+    transition: all 0.25s ease-in;
+    /* Menu sticky */
+    &.fixed {
+      position: fixed;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.99);
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4)
+    }
+  }
+  .nav-container {
+    @include clearfix;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 50px !important;
+    .brand {
+      float: left;
+      img {
+        display: block;
+        height: 45px;
+        margin-top: 3px;
+      }
+    }
+    ul {
+      float: right;
+      li {
+        float: left;
+      }
+      a {
+        display: block;
+        height: 50px;
+        padding: 0.75em 1.25em;
+        color: inherit;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        letter-spacing: 1px;
+        transition: all 0.15s ease-in;
+        &:hover {
+          background-color: lighten( $color-turquesa, 10% );
+          color: $color-font-white;
+          text-shadow: 1px 0px 1px $color-font-black;
+        }
+        &.active {
+          background-color: $color-turquesa;
+          color: $color-font-white;
+          text-shadow: 1px 0px 1px $color-font-black;
+        }
+      }
+    }
+  }
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    padding-right: 15px;
+    img {
+      width: 20%;
+    }
+    ul {
+      position: absolute;
+      width: 100%;
+      bottom: 48px;
+    }
+    li {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border: 1px solid $color-font-white;
+      border-radius: 10px;
+      //transition: background-color 0.25s  ease-out;
+      transition: all 0.35s  ease-in;
+      &:nth-child(2) {
+        margin: 0 25px;
+      }
+      &:hover {
+        background-color: $color-font-white;
+        border-radius: 50%;
+        i {
+          color: #333;
+        }
+      }
+      i {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+        line-height: 1.75em;
+        color: $color-font-white;
+        transition: all 0.15s  ease-in-out;
+      }
+    }
+  }
+}
+
+/* MAIN CONTAINER */
+section {
+  > .container {
+    @include clearfix;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  h3, h2 {
+    font-size: 24px;
+    margin-bottom: 1em;
+  }
+}
+/* NOSOTROS */
+section#nosotros {
+  @include clearfix;
+  padding: 45px 0;
+  .mision,
+  .vision,
+  .valores {
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0 65px;
+    i {
+      font-size: 30px;
+    }
+    h3 {
+      text-transform: uppercase;
+      margin: 0.5em 0 1em;
+      font-size: 24px;
+    }
+  }  
+}
+/* PROYECTOS */
+section#proyectos {
+  background-color: $bg-gris;
+}
+.galeria-proyectos {
+  @include clearfix;
+}
+.proyectos-electricos,
+.proyectos-civiles {
+  @include clearfix;
+  width: 50%;
+  height: 100%;
+  float: left;
+  h3 {
+    width: 45%;
+    min-width: 210px;
+    padding: 5px 0;
+    margin: 25px auto ;
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $color-font-white-opac;
+    border-radius: 12px;
+    background-color: $bg-black;
+  }
+  div[class*="item"] {
+    overflow: hidden;
+    float: left;
+    height: 340px;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    img {
+      display: block;
+      height: 100%;
+    }
+    .overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      color: $color-font-white;
+      font-size: 0.9em;
+      text-align: center;
+      text-shadow: 1px 0px 1px #333;
+      transition: all 0.35s ease-out;
+      .content {
+        position: absolute;
+        bottom: 25px;
+        width: 100%;
+      }
+      h5 {
+        font-size: 1.2em;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .item-lg {
+    width: 100%;
+  }
+  .item-md {
+    width: 50%;
+  }
+  .civil-01, .civil-02, .civil-03 {
+    img {
+      width: 100%;
+    }
+  }
+}
+  
+/* CONTACTO */
+section#contacto {
+  background-color: $bg-azul;
+  color: $color-font-white;
+  form {
+    width: 50%;
+    min-width: 550px;
+    margin: 0 auto;
+    p {
+      @include clearfix;
+      margin-bottom: 0.5em;
+    }
+    label, input, textarea {
+      float: left;
+    }
+    label {
+      width: 30%;
+      text-transform: uppercase;
+      text-align: right;
+      height: 2em;
+      padding-right: 30px;;
+      line-height: 2em;
+      font-size: 0.9em;
+    }
+    input, textarea {
+      width: 70%;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      box-shadow: inset 0px 0px 5px #ccc ;
+    }
+    input {
+      height: 36px;
+      padding: 0.5em 1em;
+    }
+    input[type="submit"] {
+      margin-left: 30%;
+      background-color: $color-turquesa ;
+      border: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #333;
+      cursor: pointer;
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  @include clearfix;
+  background: $bg-black;
+  color: $color-font-white;
+  font-size: 0.9em;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  .footer-container {
+    width: 90%;
+    margin: 0 auto;
+    h4 {
+      margin-bottom: 0.4em;
+      font-size: 1.1em;
+    }
+    i {
+      width: 20px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 0 0 24px 0;
+      height: 0;
+      width: 100%;
+    }
+    > div {
+      width: 33.333%;
+      float: left;
+      padding-right: 55px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  
+  .logo {
+      width: 100% !important;
+      padding-right: 0 !important;
+    img {
+      height: 45px;
+      margin-bottom: 5px;
+    }
+  }
+  .informacion {
+    i {
+      margin-right: 5px;;
+    }
+  }
+  .mensaje {
+      text-align: center;
+  }
+  #map {
+    iframe {
+      width: 100%;
+      height: 250px;
+    }
+  }
+}
+
