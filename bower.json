@@ -1,0 +1,21 @@
+{
+  "name": "hacisproyectos",
+  "authors": [
+    "YoelZalas <yoel.zalas@gmail.com>"
+  ],
+  "description": "dependencies",
+  "main": "",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

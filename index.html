@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ngApp" ng-controller="ngCtrl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -173,30 +173,48 @@
       <div class="container">
         <h3>Contáctanos</h3>
         <div>
-          <form action="">
+          <form ng-submit="sendMessage()" novalidate="" name="myMessageForm">
             <p>
               <label for="nombre"> Nombre(s)</label>
-              <input type="text" name="nombre" required>
+              <input ng-model='messageForm.nombre' type="text" name="nombre" required>
+              <div ng-show="myMessageForm.$submitted || myMessageForm.nombre.$touched">
+                <span ng-show="myMessageForm.nombre.$error.required">nombre requerido.</span>
+              </div>
             </p>
             <p>
               <label for="apellidos"> Apellidos</label>
-              <input type="text" name="apellidos" required>
+              <input ng-model='messageForm.apellidos' type="text" name="apellidos" required>
+              <div ng-show="myMessageForm.$submitted || myMessageForm.apellidos.$touched">
+                <span ng-show="myMessageForm.apellidos.$error.required">apellidos requeridos.</span>
+              </div>
             </p>
             <p>
               <label for="empresa">Empresa</label>
-              <input type="text" name="empresa" placeholder=" *Opcional">
+              <input ng-model='messageForm.empresa' type="text" name="empresa" placeholder=" *Opcional">
+              <div ng-show="myMessageForm.$submitted || myMessageForm.empresa.$touched">
+                <span ng-show="myMessageForm.empresa.$error.required">empresa requerida.</span>
+              </div>
             </p>
             <p>
               <label for="email"> Email</label>
-              <input type="text" name="email" required>
+              <input ng-model='messageForm.email' type="email" name="email" required>
+              <div ng-show="myMessageForm.$submitted || myMessageForm.email.$touched">
+                <span ng-show="myMessageForm.email.$error.required">email requerido.</span>
+              </div>
             </p>
             <p>
               <label for="telefono"> Teléfono</label>
-              <input type="text" name="telefono" required>
+              <input ng-model='messageForm.telefono' type="text" name="telefono" required>
+              <div ng-show="myMessageForm.$submitted || myMessageForm.telefono.$touched">
+                <span ng-show="myMessageForm.telefono.$error.required">telefono requerido.</span>
+              </div>
             </p>
             <p>
               <label for="Mensaje"> Mensaje</label>
-              <textarea name="Mensaje" id="" cols="30" rows="10" required></textarea>
+              <textarea ng-model='messageForm.mensaje' name="mensaje" id="" cols="30" rows="10" required></textarea>
+              <div ng-show="myMessageForm.$submitted || myMessageForm.mensaje.$touched">
+                <span ng-show="myMessageForm.mensaje.$error.required">mensaje requerido.</span>
+              </div>
             </p>
             <p>
               <input type="submit" value="ENVIAR">
@@ -252,6 +270,8 @@
     <script src="js/parallax.js"></script>
     <script src="js/scripts.js"></script>
     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+    <script src="js/ngapp.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
