@@ -90,6 +90,8 @@ div.hero {
       content: "";
       display: table;
       clear: both; }
+    div.hero .nav-container .menu-bars {
+      display: none; }
     div.hero .nav-container .brand {
       float: left; }
       div.hero .nav-container .brand img {
@@ -398,6 +400,37 @@ footer {
     padding-right: 35px; } }
 /* For Mobile  640px*/
 @media screen and (max-width: 640px) {
+  div.hero .nav-container {
+    height: 50px; }
+    div.hero .nav-container .menu-bars {
+      display: block;
+      float: right;
+      width: 40px;
+      height: 50px;
+      text-align: right; }
+      div.hero .nav-container .menu-bars i {
+        font-size: 35px;
+        line-height: 1.35; }
+    div.hero .nav-container .brand img {
+      height: 36px;
+      margin-top: 5px; }
+    div.hero .nav-container ul {
+      position: fixed;
+      width: 80%;
+      height: calc(100%);
+      right: 100%;
+      margin: 0;
+      top: 49px;
+      background: #fff;
+      overflow: scroll; }
+      div.hero .nav-container ul li {
+        width: 100%;
+        border-bottom: 1px solid #efefef; }
+        div.hero .nav-container ul li:first-child {
+          border-top: 1px solid #efefef; }
+      div.hero .nav-container ul a {
+        padding-left: 30px; }
+
   .proyectos-electricos .item-md,
   .proyectos-civiles .item-md {
     width: 100%; }

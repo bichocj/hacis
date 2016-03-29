@@ -131,6 +131,9 @@ div.hero {
     width: 90%;
     margin: 0 auto;
     min-height: 50px !important;
+    .menu-bars {
+        display: none;
+    }
     .brand {
       float: left;
       img {

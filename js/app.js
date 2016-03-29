@@ -54,3 +54,19 @@ sr.reveal('.valores', { duration: 800, delay: 500 });
 sr.reveal('.item-lg', { duration: 800, delay: 200 });
 sr.reveal('.item-md', { duration: 800, delay: 400 });
 sr.reveal('#formContact', {duration: 800});
+
+/* Responsive Menu */
+var contador = 1;
+    $('.menu-bars').click(function () {
+        if (contador == 1) {
+          $('div.hero .nav-container ul').animate({
+              left: '0'
+          });  
+          contador = 0;
+        } else  {
+            contador = 1;
+            $('div.hero .nav-container ul').animate({
+              left: '-100%'
+            }); 
+        }
+    });

@@ -60,6 +60,50 @@ $breakpoint-small-mobile: 480px;
 
 /* For Mobile  640px*/
 @media screen and (max-width: $breakpoint-mobile) {
+  div.hero {
+    .nav-container {
+      height: 50px;
+      //overflow-y: hidden;
+      .menu-bars {
+        display: block;
+        float: right;
+        width: 40px;
+        height: 50px;
+        text-align: right;
+        i {
+          font-size: 35px;
+          line-height: 1.35;
+        }
+      }
+      .brand {
+        img {
+          height: 36px;
+          margin-top: 5px;
+        }
+      }
+      ul {
+        position: fixed;
+        width: 80%;
+        height: calc(100%);
+        right: 100%;
+        margin: 0;
+        top: 49px;
+        background: $bg-white;
+        overflow: scroll;
+        li {
+          width: 100%;
+          border-bottom: 1px solid $color-font-white-opac;
+          &:first-child {
+            border-top: 1px solid $color-font-white-opac;
+          }
+          
+        }
+        a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
   .proyectos-electricos,
   .proyectos-civiles {
     .item-md {
