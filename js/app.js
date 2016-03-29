@@ -47,7 +47,7 @@ window.addEventListener('scroll', function (e) {
 
 window.sr = ScrollReveal({ reset: true });
 
-sr.reveal('.hero-container', {duration: 800});
+sr.reveal('.hero-container', {duration: 300});
 sr.reveal('.mision', {duration: 800});
 sr.reveal('.vision', { duration: 800, delay: 300 });
 sr.reveal('.valores', { duration: 800, delay: 500 });
