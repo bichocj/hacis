@@ -57,11 +57,10 @@ ul {
 
 hr {
   border: none;
-  border-top: 1px solid #eee;
-  margin: 0 0 24px 0;
+  border-top: 1px solid #efefef;
   height: 0;
-  width: 90%;
-  margin: auto; }
+  width: 100%;
+  margin: 0.5em 0 1em; }
 
 /* HERO */
 div.hero {
@@ -185,12 +184,13 @@ section h3, section h2 {
   #seccionNosotros .mision i,
   #seccionNosotros .vision i,
   #seccionNosotros .valores i {
-    font-size: 30px; }
+    font-size: 30px;
+    text-shadow: 1px 1px 3px #efefef; }
   #seccionNosotros .mision h3,
   #seccionNosotros .vision h3,
   #seccionNosotros .valores h3 {
     text-transform: uppercase;
-    margin: 0.5em 0 1em;
+    margin: 0.5em 0;
     font-size: 24px; }
 
 /* PROYECTOS */
@@ -434,5 +434,6 @@ footer {
     #seccionContacto form input[type="submit"] {
       margin-left: 0;
       text-align: center; } }
+/**/
 
 /*# sourceMappingURL=main.css.map */

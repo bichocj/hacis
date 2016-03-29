@@ -96,11 +96,10 @@ ul {
 }
 hr {
   border: none;
-  border-top: 1px solid #eee;
-  margin: 0 0 24px 0;
+  border-top: 1px solid $color-font-white-opac;
   height: 0;
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  margin: 0.5em 0 1em;
 }
 
 
@@ -242,10 +241,11 @@ section {
     
     i {
       font-size: 30px;
+      text-shadow: 1px 1px 3px $color-font-white-opac;
     }
     h3 {
       text-transform: uppercase;
-      margin: 0.5em 0 1em;
+      margin: 0.5em 0;
       font-size: 24px;
     }
   }  
