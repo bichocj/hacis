@@ -139,7 +139,7 @@ div.hero {
       height: 45px;
       border: 1px solid #fafafa;
       border-radius: 10px;
-      transition: all 0.35s  ease-in; }
+      transition: all 0.30s ease-in-out; }
       div.hero > div li:nth-child(2) {
         margin: 0 25px; }
       div.hero > div li:hover {
@@ -357,7 +357,9 @@ footer {
   footer .informacion i {
     margin-right: 5px; }
   footer .mensaje {
-    text-align: center; }
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic; }
   footer #map iframe {
     width: 100%;
     height: 250px; }
@@ -405,9 +407,10 @@ footer {
     div.hero .nav-container .menu-bars {
       display: block;
       float: right;
-      width: 40px;
+      width: 50px;
       height: 50px;
-      text-align: right; }
+      text-align: right;
+      cursor: pointer; }
       div.hero .nav-container .menu-bars i {
         font-size: 35px;
         line-height: 1.35; }
@@ -420,9 +423,9 @@ footer {
       height: calc(100%);
       right: 100%;
       margin: 0;
-      top: 49px;
+      top: 51px;
       background: #fff;
-      overflow: scroll; }
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4); }
       div.hero .nav-container ul li {
         width: 100%;
         border-bottom: 1px solid #efefef; }

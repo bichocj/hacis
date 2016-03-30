@@ -1,31 +1,33 @@
 
-/*
-$(document).ready(function () {
-    var altura = $('section.nosotros').offset().top;
-    alert(altura);
-
-    $(window).on('scroll', function () {
-        if($(window).scrollTop() > altura ) {
-            $('#menu').addClass('fixed');
-        } else  {
-            $('#menu').removeClass('fixed');
-        }
-    });
-});
-*/
 'use strict';
 var menu = document.getElementById('menu');
 var section = document.getElementById('seccionNosotros')
 var altura = section.offsetTop - 50;
-//var hero = document.querySelector('.hero');
-//var altura = hero.offsetHeight;
-//alert(altura);
 
 window.addEventListener('scroll', function (e) {
-    if (window.pageYOffset > altura) {
+    var anchoWindow = window.innerWidth;
+    if(anchoWindow <= 640 ) {
         menu.classList.add('fixed');
-    } else  {
+    } else if (window.pageYOffset > altura) {
+        menu.classList.add('fixed');
+    } else {
         menu.classList.remove('fixed');
+    }    
+});
+
+/* Responsive Menu */
+var contador = 1;
+$('.menu-bars').click(function () {
+    if (contador == 1) {
+        $('div.hero .nav-container ul').animate({
+            left: '0'
+        });  
+        contador = 0;
+    } else  {
+        contador = 1;
+        $('div.hero .nav-container ul').animate({
+            left: '-100%'
+        }); 
     }
 });
 
@@ -33,6 +35,7 @@ window.addEventListener('scroll', function (e) {
 
     $('.nav-container ul a').click(function (e) {
         //alert("btn ID " + e.currentTarget.id);
+        var anchoWindow = window.innerWidth;  
         e.preventDefault();
         var SectionID = e.currentTarget.id;
         
@@ -41,6 +44,13 @@ window.addEventListener('scroll', function (e) {
         }, 800, function () {
             window.location.hash = SectionID;
         });
+        
+        if (anchoWindow <= 640) {
+            contador = 1;
+            $('div.hero .nav-container ul').animate({
+                left: '-100%'
+            });
+        }        
     });
 
 /* Scroll Reveal */
@@ -55,18 +65,3 @@ sr.reveal('.item-lg', { duration: 800, delay: 200 });
 sr.reveal('.item-md', { duration: 800, delay: 400 });
 sr.reveal('#formContact', {duration: 800});
 
-/* Responsive Menu */
-var contador = 1;
-    $('.menu-bars').click(function () {
-        if (contador == 1) {
-          $('div.hero .nav-container ul').animate({
-              left: '0'
-          });  
-          contador = 0;
-        } else  {
-            contador = 1;
-            $('div.hero .nav-container ul').animate({
-              left: '-100%'
-            }); 
-        }
-    });

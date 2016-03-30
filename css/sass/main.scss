@@ -192,7 +192,7 @@ div.hero {
       border: 1px solid $color-font-white;
       border-radius: 10px;
       //transition: background-color 0.25s  ease-out;
-      transition: all 0.35s  ease-in;
+      transition: all 0.30s ease-in-out;
       &:nth-child(2) {
         margin: 0 25px;
       }
@@ -425,6 +425,8 @@ footer {
   }
   .mensaje {
       text-align: center;
+      font-size: 1.2em;
+      font-style: italic;
   }
   #map {
     iframe {
