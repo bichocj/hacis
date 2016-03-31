@@ -329,7 +329,7 @@ section h3, section h2 {
       font-family: inherit;
       box-shadow: inset 0px 0px 5px #ccc; }
     #seccionContacto form input {
-      height: 36px; }
+      height: 34px; }
     #seccionContacto form input[type="submit"] {
       margin-left: 30%;
       background-color: #74CBB5;
@@ -338,12 +338,17 @@ section h3, section h2 {
       letter-spacing: 1px;
       color: #333;
       cursor: pointer; }
-    #seccionContacto form [ng-show] {
+    #seccionContacto form label.error {
       width: 70%;
-      margin: -7px 0 0 auto;
+      display: block;
+      margin: -5px 0 -2px 30%;
+      padding: 0;
       font-size: 0.95em;
-      text-transform: capitalize;
-      color: #FFC107; }
+      text-transform: inherit;
+      text-align: left;
+      color: #74CBB5; }
+      #seccionContacto form label.error::first-letter {
+        text-transform: uppercase; }
 
 /* FOOTER */
 footer {
@@ -500,8 +505,9 @@ footer {
     #seccionContacto form input[type="submit"] {
       margin-left: 0;
       text-align: center; }
-    #seccionContacto form [ng-show] {
-      width: 100%; } }
+    #seccionContacto form label.error {
+      width: 100%;
+      margin-left: 0; } }
 /**/
 
 /*# sourceMappingURL=main.css.map */

@@ -386,7 +386,7 @@ section {
       box-shadow: inset 0px 0px 5px #ccc ;
     }
     input {
-      height: 36px;
+      height: 34px;
     }
     input[type="submit"] {
       margin-left: 30%;
@@ -397,13 +397,19 @@ section {
       color: #333;
       cursor: pointer;
     }
-    [ng-show] {
+    label.error {
       width: 70%;
-      margin: -7px 0 0 auto;
+      display: block;
+      margin: -5px 0 -2px 30%;
+      padding: 0;
       font-size: 0.95em;
-      text-transform: capitalize;
-      color: #FFC107;
-      //color: $color-turquesa;
+      text-transform: inherit;
+      text-align: left;
+      //color: #FFC107;
+      color: $color-turquesa;
+      &::first-letter {
+          text-transform: uppercase;
+      }
     }
   }
 }
