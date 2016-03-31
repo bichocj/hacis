@@ -159,6 +159,9 @@ $breakpoint-small-mobile: 480px;
         margin-left: 0;
         text-align: center;
       }
+      [ng-show] {
+        width: 100%;
+      }
     }
   } 
 }
