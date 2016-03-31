@@ -54,7 +54,9 @@
         </div>
       </nav>
       <div class="hero-container">
-        <img src="img/hacis%20logo%20formal%202.png" alt="HACIS PROYECTOS" class="logoHacis">
+        <div class="logoHacis">
+          <img src="img/hacis%20logo%20formal%202.png" alt="HACIS PROYECTOS">
+        </div>
         <ul>
           <li>
             <a href="#" target="_blank">
@@ -184,7 +186,7 @@
       <div class="container">
         <h3>Contáctanos</h3>
         <div>
-          <form ng-submit="sendMessage()" novalidate="" name="myMessageForm">
+          <form id="formContact" ng-submit="sendMessage()" novalidate="" name="myMessageForm">
             <p>
               <label for="nombre"> Nombre(s)</label>
               <input ng-model='messageForm.nombre' type="text" name="nombre" required>
@@ -262,15 +264,15 @@
         
         <div class="ubicacion">
           <div id="map">
-            <iframe src="https://www.google.com/maps/d/embed?mid=zqFugoVLEu9w.kxqxanCCVXEQ" width="640" height="480"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=zqFugoVLEu9w.kxqxanCCVXEQ" width="640" height="480" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <!--
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/flexslider.min.js"></script>
     <script src="js/lightbox.min.js"></script>
     <script src="js/masonry.min.js"></script>

@@ -32,31 +32,30 @@ $('.menu-bars').click(function () {
 });
 
 /* Scrolling Page with JQuery*/
-
-    $('.nav-container ul a').click(function (e) {
-        //alert("btn ID " + e.currentTarget.id);
-        var anchoWindow = window.innerWidth;  
-        e.preventDefault();
-        var SectionID = e.currentTarget.id;
-        
-        $('html body').animate({
-            scrollTop: $("#seccion" + SectionID).offset().top
-        }, 800, function () {
-            window.location.hash = SectionID;
-        });
-        
-        if (anchoWindow <= 640) {
-            contador = 1;
-            $('div.hero .nav-container ul').animate({
-                left: '-100%'
-            });
-        }        
+$('.nav-container ul a').click(function (e) {
+    //alert("btn ID " + e.currentTarget.id);
+    var anchoWindow = window.innerWidth;  
+    e.preventDefault();
+    var SectionID = e.currentTarget.id;
+    
+    $('html body').animate({
+        scrollTop: $("#seccion" + SectionID).offset().top
+    }, 800, function () {
+        window.location.hash = SectionID;
     });
+    
+    if (anchoWindow <= 640) {
+        contador = 1;
+        $('div.hero .nav-container ul').animate({
+            left: '-100%'
+        });
+    }        
+});
 
 /* Scroll Reveal */
 
 window.sr = ScrollReveal({ reset: true });
-
+//var itemForm = $('#formContact p')
 sr.reveal('.hero-container', {duration: 300});
 sr.reveal('.mision', {duration: 800});
 sr.reveal('.vision', { duration: 800, delay: 300 });

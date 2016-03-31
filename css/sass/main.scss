@@ -176,21 +176,26 @@ div.hero {
     text-align: center;
     padding-right: 15px;
     background: rgba(0, 0, 0, 0.15);
-    img {
+    .logoHacis {
       width: 20%;
       min-width: 200px;
-      /*
+      margin: auto;
       background: rgba(255,255,255,.3);
       position: relative;
-      
+      img {
+        width: 100%;
+        display: block;
+      }
+      /*
       &::before {
           content: "";
           position: absolute;
           left: 0;
-          bottom: 0;
+          bottom: 13%;
           width: 100%;
-          height: 20px;
-          background: rgba(0, 0, 0, 0.15);
+          height: 18%;
+          background: rgba(0, 0, 0, 1);
+          z-index: -1;
       }
       */
     }
@@ -370,6 +375,7 @@ section {
       border: 1px solid #eee;
       border-radius: 4px;
       padding: 0.5em 1em;
+      color: $color-font-primary;
       font-size: 0.9em;
       font-family: inherit;
       box-shadow: inset 0px 0px 5px #ccc ;
@@ -385,6 +391,14 @@ section {
       letter-spacing: 1px;
       color: #333;
       cursor: pointer;
+    }
+    [ng-show] {
+      width: 70%;
+      margin: -7px 0 0 auto;
+      font-size: 0.95em;
+      text-transform: capitalize;
+      color: #FFC107;
+      //color: $color-turquesa;
     }
   }
 }
