@@ -1,5 +1,21 @@
 (function($,W,D)
 {
+    $.fn.serializeObject = function() {
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function() {
+            if (o[this.name] !== undefined) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    };
+
     var JQUERY4U = {};
 
     JQUERY4U.UTIL =
@@ -41,8 +57,8 @@
                     $.ajax({
                         type: "POST",
                         url: "mail/send-mail-service.php",
-                        data: $(form).serialize(),
-                        timeout: 3000,
+                        data: JSON.stringify(registerForm.serializeObject()),
+                        // timeout: 3000,
                         success: function(data) {
                             if (data == '') {
                                 registerForm[0].reset();
