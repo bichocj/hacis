@@ -116,11 +116,11 @@ div.hero {
         letter-spacing: 1px;
         transition: all 0.15s ease-in; }
         div.hero .nav-container ul a:hover {
-          background-color: #78ccb7;
+          background-color: #99d9c9;
           color: #fafafa;
           text-shadow: 1px 0px 1px #333; }
         div.hero .nav-container ul a.active {
-          background-color: #74CBB5;
+          background-color: #61c4ab;
           color: #fafafa;
           text-shadow: 1px 0px 1px #333; }
   div.hero > div {
@@ -398,12 +398,20 @@ footer {
     height: 250px; }
 
 /* RESPONSIVE MEDIA QUERIES*/
-/* For Tablet*/
+/* For Tablet 992*/
 @media screen and (max-width: 992px) {
   #seccionNosotros .mision,
   #seccionNosotros .vision,
   #seccionNosotros .valores {
-    padding: 0 35px; } }
+    padding: 0 35px; }
+
+  footer .footer-container > div {
+    width: 50%; }
+    footer .footer-container > div:last-child {
+      width: 80%;
+      margin: 35px 10% 0; }
+  footer #map iframe {
+    height: 300px; } }
 /* For small devices 768px*/
 @media screen and (max-width: 768px) {
   #seccionNosotros .mision,
@@ -485,8 +493,13 @@ footer {
     float: none;
     margin: 25px auto 0;
     padding-right: 0; }
+    footer .footer-container > div:last-child {
+      width: 90%;
+      margin: 35px 5% 0; }
   footer .footer-container br {
-    display: none; } }
+    display: none; }
+  footer .footer-container #map iframe {
+    height: 250px; } }
 /* for small mobiles 480px*/
 @media screen and (max-width: 480px) {
   .proyectos-civiles div[class*="item"],

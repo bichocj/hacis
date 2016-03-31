@@ -12,7 +12,21 @@ window.addEventListener('scroll', function (e) {
         menu.classList.add('fixed');
     } else {
         menu.classList.remove('fixed');
-    }    
+    }
+    
+    /* On scroll actives items menu */
+    var scrollPos = $(document).scrollTop() + 50;
+    $('.top-menu li a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.top-menu li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });    
 });
 
 /* Responsive Menu */
@@ -55,7 +69,7 @@ $('.nav-container ul a').click(function (e) {
 /* Scroll Reveal */
 
 window.sr = ScrollReveal({ reset: true });
-//var itemForm = $('#formContact p')
+
 sr.reveal('.hero-container', {duration: 300});
 sr.reveal('.mision', {duration: 800});
 sr.reveal('.vision', { duration: 800, delay: 300 });
@@ -63,4 +77,14 @@ sr.reveal('.valores', { duration: 800, delay: 500 });
 sr.reveal('.item-lg', { duration: 800, delay: 200 });
 sr.reveal('.item-md', { duration: 800, delay: 400 });
 sr.reveal('#formContact', {duration: 800});
+
+
+/* Active items-menu  */
+var items_Menu = $('.top-menu li a');
+
+items_Menu.click( function (e) {
+    items_Menu.removeClass('active');
+    $(this).addClass('active');   
+});
+
 
