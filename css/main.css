@@ -57,17 +57,17 @@ ul {
 
 hr {
   border: none;
-  border-top: 1px solid #eee;
-  margin: 0 0 24px 0;
+  border-top: 1px solid #efefef;
   height: 0;
-  width: 90%;
-  margin: auto; }
+  width: 100%;
+  margin: 0.5em 0 1em; }
 
 /* HERO */
 div.hero {
   width: 100%;
   height: 100vh;
-  background-color: #3F6DA9;
+  background: url("../img/bg-construccion-01.jpg") center;
+  background-size: cover;
   display: table; }
   div.hero #menu {
     position: absolute;
@@ -90,6 +90,8 @@ div.hero {
       content: "";
       display: table;
       clear: both; }
+    div.hero .nav-container .menu-bars {
+      display: none; }
     div.hero .nav-container .brand {
       float: left; }
       div.hero .nav-container .brand img {
@@ -122,9 +124,25 @@ div.hero {
     vertical-align: middle;
     position: relative;
     text-align: center;
-    padding-right: 15px; }
+    padding-right: 15px;
+    background: rgba(0, 0, 0, 0.15); }
     div.hero > div img {
-      width: 20%; }
+      width: 20%;
+      min-width: 200px;
+      /*
+      background: rgba(255,255,255,.3);
+      position: relative;
+      
+      &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 20px;
+          background: rgba(0, 0, 0, 0.15);
+      }
+      */ }
     div.hero > div ul {
       position: absolute;
       width: 100%;
@@ -135,7 +153,7 @@ div.hero {
       height: 45px;
       border: 1px solid #fafafa;
       border-radius: 10px;
-      transition: all 0.35s  ease-in; }
+      transition: all 0.30s ease-in-out; }
       div.hero > div li:nth-child(2) {
         margin: 0 25px; }
       div.hero > div li:hover {
@@ -162,35 +180,37 @@ section > .container {
     display: table;
     clear: both; }
 section h3, section h2 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 1em; }
 
 /* NOSOTROS */
-section#nosotrosSection:after {
+#seccionNosotros:after {
   content: "";
   display: table;
   clear: both; }
-section#nosotrosSection .mision,
-section#nosotrosSection .vision,
-section#nosotrosSection .valores {
+#seccionNosotros .mision,
+#seccionNosotros .vision,
+#seccionNosotros .valores {
   width: 33.333%;
   float: left;
+  padding: 0 65px;
+  margin-top: 35px;
   text-align: center;
-  font-size: 0.9em;
-  padding: 0 65px; }
-  section#nosotrosSection .mision i,
-  section#nosotrosSection .vision i,
-  section#nosotrosSection .valores i {
-    font-size: 30px; }
-  section#nosotrosSection .mision h3,
-  section#nosotrosSection .vision h3,
-  section#nosotrosSection .valores h3 {
+  font-size: 0.9em; }
+  #seccionNosotros .mision i,
+  #seccionNosotros .vision i,
+  #seccionNosotros .valores i {
+    font-size: 30px;
+    text-shadow: 1px 1px 3px #efefef; }
+  #seccionNosotros .mision h3,
+  #seccionNosotros .vision h3,
+  #seccionNosotros .valores h3 {
     text-transform: uppercase;
-    margin: 0.5em 0 1em;
+    margin: 0.5em 0;
     font-size: 24px; }
 
 /* PROYECTOS */
-section#proyectosSection {
+#seccionProyectos {
   background-color: #f5f5f5; }
 
 .galeria-proyectos:after {
@@ -269,38 +289,40 @@ section#proyectosSection {
     width: 100%; }
 
 /* CONTACTO */
-section#contactoSection {
+#seccionContacto {
   background-color: #3F6DA9;
   color: #fafafa; }
-  section#contactoSection form {
+  #seccionContacto form {
     width: 50%;
     min-width: 550px;
-    margin: 0 auto; }
-    section#contactoSection form p {
+    margin: 45px auto 0; }
+    #seccionContacto form p {
       margin-bottom: 0.5em; }
-      section#contactoSection form p:after {
+      #seccionContacto form p:after {
         content: "";
         display: table;
         clear: both; }
-    section#contactoSection form label, section#contactoSection form input, section#contactoSection form textarea {
+    #seccionContacto form label, #seccionContacto form input, #seccionContacto form textarea {
       float: left; }
-    section#contactoSection form label {
+    #seccionContacto form label {
       width: 30%;
       text-transform: uppercase;
       text-align: right;
       height: 2em;
       padding-right: 30px;
       line-height: 2em;
-      font-size: 0.9em; }
-    section#contactoSection form input, section#contactoSection form textarea {
+      font-size: 0.8em; }
+    #seccionContacto form input, #seccionContacto form textarea {
       width: 70%;
       border: 1px solid #eee;
       border-radius: 4px;
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+      font-family: inherit;
       box-shadow: inset 0px 0px 5px #ccc; }
-    section#contactoSection form input {
-      height: 36px;
-      padding: 0.5em 1em; }
-    section#contactoSection form input[type="submit"] {
+    #seccionContacto form input {
+      height: 36px; }
+    #seccionContacto form input[type="submit"] {
       margin-left: 30%;
       background-color: #74CBB5;
       border: none;
@@ -322,7 +344,8 @@ footer {
     clear: both; }
   footer .footer-container {
     width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    font-size: 0.85em; }
     footer .footer-container h4 {
       margin-bottom: 0.4em;
       font-size: 1.1em; }
@@ -344,12 +367,13 @@ footer {
     width: 100% !important;
     padding-right: 0 !important; }
     footer .logo img {
-      height: 45px;
-      margin-bottom: 5px; }
+      height: 35px; }
   footer .informacion i {
     margin-right: 5px; }
   footer .mensaje {
-    text-align: center; }
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic; }
   footer #map iframe {
     width: 100%;
     height: 250px; }
@@ -357,15 +381,109 @@ footer {
 /* RESPONSIVE MEDIA QUERIES*/
 /* For Tablet*/
 @media screen and (max-width: 992px) {
-  section#nosotrosSection .mision,
-  section#nosotrosSection .vision,
-  section#nosotrosSection .valores {
-    margin-top: 45px; } }
-/* For small devices */
+  #seccionNosotros .mision,
+  #seccionNosotros .vision,
+  #seccionNosotros .valores {
+    padding: 0 35px; } }
+/* For small devices 768px*/
 @media screen and (max-width: 768px) {
-  section#nosotrosSection .mision,
-  section#nosotrosSection .vision,
-  section#nosotrosSection .valores {
-    width: 100%; } }
+  #seccionNosotros .mision,
+  #seccionNosotros .vision,
+  #seccionNosotros .valores {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 0.8em; }
+    #seccionNosotros .mision h3,
+    #seccionNosotros .vision h3,
+    #seccionNosotros .valores h3 {
+      font-size: 20px; }
+  #seccionNosotros .mision {
+    margin-top: 0; }
+
+  .proyectos-electricos,
+  .proyectos-civiles {
+    width: 90%;
+    float: none;
+    margin: auto; }
+    .proyectos-electricos div[class*="item"],
+    .proyectos-civiles div[class*="item"] {
+      height: 250px; }
+
+  .electr-03 img {
+    width: 100%; }
+
+  footer .footer-container > div {
+    padding-right: 35px; } }
+/* For Mobile  640px*/
+@media screen and (max-width: 640px) {
+  div.hero .nav-container {
+    height: 50px; }
+    div.hero .nav-container .menu-bars {
+      display: block;
+      float: right;
+      width: 50px;
+      height: 50px;
+      text-align: right;
+      cursor: pointer; }
+      div.hero .nav-container .menu-bars i {
+        font-size: 35px;
+        line-height: 1.35; }
+    div.hero .nav-container .brand img {
+      height: 36px;
+      margin-top: 5px; }
+    div.hero .nav-container ul {
+      position: fixed;
+      width: 80%;
+      height: calc(100%);
+      right: 100%;
+      margin: 0;
+      top: 51px;
+      background: #fff;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4); }
+      div.hero .nav-container ul li {
+        width: 100%;
+        border-bottom: 1px solid #efefef; }
+        div.hero .nav-container ul li:first-child {
+          border-top: 1px solid #efefef; }
+      div.hero .nav-container ul a {
+        padding-left: 30px; }
+
+  .proyectos-electricos .item-md,
+  .proyectos-civiles .item-md {
+    width: 100%; }
+    .proyectos-electricos .item-md img,
+    .proyectos-civiles .item-md img {
+      width: 100%; }
+
+  #seccionContacto form {
+    min-width: 400px;
+    width: 90%; }
+    #seccionContacto form label {
+      font-size: 0.75em; }
+
+  footer .footer-container > div {
+    width: 90%;
+    float: none;
+    margin: 25px auto 0;
+    padding-right: 0; } }
+/* for small mobiles 480px*/
+@media screen and (max-width: 480px) {
+  .proyectos-civiles div[class*="item"],
+  .proyectos-electricos div[class*="item"] {
+    height: 200px; }
+
+  #seccionContacto form {
+    min-width: 0;
+    margin-top: 22px; }
+    #seccionContacto form label,
+    #seccionContacto form input,
+    #seccionContacto form textarea {
+      width: 100%;
+      float: none;
+      text-align: left; }
+    #seccionContacto form input[type="submit"] {
+      margin-left: 0;
+      text-align: center; } }
+/**/
 
 /*# sourceMappingURL=main.css.map */

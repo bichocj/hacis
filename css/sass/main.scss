@@ -42,7 +42,7 @@
   font-weight: normal;
   src: url("../fonts/SFFourcheSCItalic.ttf") format("truetype");
 }
-
+//Helvetica
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('../fonts/HelveticaNeueThin.ttf') format('truetype');
@@ -96,11 +96,10 @@ ul {
 }
 hr {
   border: none;
-  border-top: 1px solid #eee;
-  margin: 0 0 24px 0;
+  border-top: 1px solid $color-font-white-opac;
   height: 0;
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  margin: 0.5em 0 1em;
 }
 
 
@@ -108,7 +107,9 @@ hr {
 div.hero {
   width: 100%;
   height: 100vh;
-  background-color:#3F6DA9 ;
+  //background-color:#3F6DA9 ;
+  background: url('../img/bg-construccion-01.jpg') center;
+  background-size: cover;
   display: table;
   #menu {
     position: absolute;
@@ -130,6 +131,9 @@ div.hero {
     width: 90%;
     margin: 0 auto;
     min-height: 50px !important;
+    .menu-bars {
+        display: none;
+    }
     .brand {
       float: left;
       img {
@@ -171,8 +175,24 @@ div.hero {
     position: relative;
     text-align: center;
     padding-right: 15px;
+    background: rgba(0, 0, 0, 0.15);
     img {
       width: 20%;
+      min-width: 200px;
+      /*
+      background: rgba(255,255,255,.3);
+      position: relative;
+      
+      &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 20px;
+          background: rgba(0, 0, 0, 0.15);
+      }
+      */
     }
     ul {
       position: absolute;
@@ -186,7 +206,7 @@ div.hero {
       border: 1px solid $color-font-white;
       border-radius: 10px;
       //transition: background-color 0.25s  ease-out;
-      transition: all 0.35s  ease-in;
+      transition: all 0.30s ease-in-out;
       &:nth-child(2) {
         margin: 0 25px;
       }
@@ -219,33 +239,36 @@ section {
     padding-bottom: 75px;
   }
   h3, h2 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 1em;
   }
 }
 /* NOSOTROS */
-section#nosotrosSection {
+#seccionNosotros {
   @include clearfix;
   .mision,
   .vision,
   .valores {
     width: 33.333%;
     float: left;
+    padding: 0 65px;
+    margin-top: 35px;
     text-align: center;
     font-size: 0.9em;
-    padding: 0 65px;
+    
     i {
       font-size: 30px;
+      text-shadow: 1px 1px 3px $color-font-white-opac;
     }
     h3 {
       text-transform: uppercase;
-      margin: 0.5em 0 1em;
+      margin: 0.5em 0;
       font-size: 24px;
     }
   }  
 }
 /* PROYECTOS */
-section#proyectosSection {
+#seccionProyectos {
   background-color: $bg-gris;
 }
 .galeria-proyectos {
@@ -319,13 +342,13 @@ section#proyectosSection {
 }
   
 /* CONTACTO */
-section#contactoSection {
+#seccionContacto {
   background-color: $bg-azul;
   color: $color-font-white;
   form {
     width: 50%;
     min-width: 550px;
-    margin: 0 auto;
+    margin: 45px auto 0;
     p {
       @include clearfix;
       margin-bottom: 0.5em;
@@ -340,17 +363,19 @@ section#contactoSection {
       height: 2em;
       padding-right: 30px;;
       line-height: 2em;
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
     input, textarea {
       width: 70%;
       border: 1px solid #eee;
       border-radius: 4px;
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+      font-family: inherit;
       box-shadow: inset 0px 0px 5px #ccc ;
     }
     input {
       height: 36px;
-      padding: 0.5em 1em;
     }
     input[type="submit"] {
       margin-left: 30%;
@@ -375,6 +400,7 @@ footer {
   .footer-container {
     width: 90%;
     margin: 0 auto;
+    font-size: 0.85em;
     h4 {
       margin-bottom: 0.4em;
       font-size: 1.1em;
@@ -403,8 +429,7 @@ footer {
       width: 100% !important;
       padding-right: 0 !important;
     img {
-      height: 45px;
-      margin-bottom: 5px;
+      height: 35px;
     }
   }
   .informacion {
@@ -414,6 +439,8 @@ footer {
   }
   .mensaje {
       text-align: center;
+      font-size: 1.2em;
+      font-style: italic;
   }
   #map {
     iframe {

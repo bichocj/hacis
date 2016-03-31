@@ -3,27 +3,163 @@
 $breakpoint-tablet : 992px ;
 $breakpoint-small-device: 768px;
 $breakpoint-mobile: 640px;
-$breakpoint-small-mobile: 767px;
+$breakpoint-small-mobile: 480px;
 
 
 /* For Tablet*/
 @media screen and (max-width: $breakpoint-tablet) {
-  section#nosotrosSection {
+  #seccionNosotros {
     .mision,
     .vision,
     .valores {
-      margin-top: 45px;
+      padding: 0 35px;
     }
   }
 }
 
-/* For small devices */
+/* For small devices 768px*/
 @media screen and (max-width: $breakpoint-small-device) {
-  section#nosotrosSection {
+  #seccionNosotros {
     .mision,
     .vision,
     .valores {
       width: 100%;
+      margin-bottom: 20px;
+      font-size: 0.8em;
+      h3 {
+        font-size: 20px;
+      }
+    }
+    .mision {
+        margin-top: 0;
+    }
+  }
+  
+  .proyectos-electricos,
+  .proyectos-civiles {
+      width: 90%;
+      float: none;
+      margin: auto;
+      
+      div[class*="item"] {
+        height: 250px;
+      }
+  }
+  .electr-03 img{
+    width: 100%;
+  }
+  
+  footer {
+    .footer-container {
+      >div {
+        padding-right: 35px;
+      }
     }
   }
 }
+
+/* For Mobile  640px*/
+@media screen and (max-width: $breakpoint-mobile) {
+  div.hero {
+    .nav-container {
+      height: 50px;
+      //overflow-y: hidden;
+      .menu-bars {
+        display: block;
+        float: right;
+        width: 50px;
+        height: 50px;
+        text-align: right;
+        cursor: pointer;
+        i {
+          font-size: 35px;
+          line-height: 1.35;
+        }
+      }
+      .brand {
+        img {
+          height: 36px;
+          margin-top: 5px;
+        }
+      }
+      ul {
+        position: fixed;
+        width: 80%;
+        height: calc(100%);
+        right: 100%;
+        margin: 0;
+        top: 51px;
+        background: $bg-white;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+        li {
+          width: 100%;
+          border-bottom: 1px solid $color-font-white-opac;
+          &:first-child {
+            border-top: 1px solid $color-font-white-opac;
+          }
+          
+        }
+        a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .proyectos-electricos,
+  .proyectos-civiles {
+    .item-md {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  #seccionContacto {
+    form {
+      min-width: 400px;
+      width: 90%;
+      label {
+        font-size: 0.75em;
+      }
+    }
+  }
+  
+  footer {
+    .footer-container {
+      >div {
+        width: 90%;
+        float: none;
+        margin: 25px auto 0;
+        padding-right: 0; 
+      }
+    }
+  }
+}
+
+/* for small mobiles 480px*/
+@media screen and (max-width: $breakpoint-small-mobile) {
+  .proyectos-civiles,
+  .proyectos-electricos {
+    div[class*="item"] {
+      height: 200px;
+    }
+  }
+  #seccionContacto {
+    form {
+      min-width: 0;
+      margin-top: 22px;
+      label,
+      input,
+      textarea {
+        width: 100%;
+        float: none;
+        text-align: left;
+      }
+      input[type="submit"] {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  } 
+}
+/**/
