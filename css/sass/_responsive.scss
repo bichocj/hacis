@@ -132,6 +132,9 @@ $breakpoint-small-mobile: 480px;
         margin: 25px auto 0;
         padding-right: 0; 
       }
+      br {
+        display: none;
+      }
     }
   }
 }

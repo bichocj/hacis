@@ -101,11 +101,15 @@ div.hero {
     div.hero .nav-container ul {
       float: right; }
       div.hero .nav-container ul li {
-        float: left; }
+        float: left;
+        box-shadow: inset 1px 0 0 0 #efefef; }
+        div.hero .nav-container ul li:last-child {
+          border-right: 1px solid #efefef; }
       div.hero .nav-container ul a {
         display: block;
         height: 50px;
-        padding: 0.75em 1.25em;
+        padding: 0 1.25em;
+        line-height: 4;
         color: inherit;
         text-transform: uppercase;
         font-size: 0.75em;
@@ -130,7 +134,6 @@ div.hero {
       width: 20%;
       min-width: 200px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.3);
       position: relative;
       /*
       &::before {
@@ -159,7 +162,7 @@ div.hero {
       border-radius: 10px;
       transition: all 0.30s ease-in-out; }
       div.hero > div li:nth-child(2) {
-        margin: 0 25px; }
+        margin-right: 25px; }
       div.hero > div li:hover {
         background-color: #fafafa;
         border-radius: 50%; }
@@ -476,7 +479,9 @@ footer {
     width: 90%;
     float: none;
     margin: 25px auto 0;
-    padding-right: 0; } }
+    padding-right: 0; }
+  footer .footer-container br {
+    display: none; } }
 /* for small mobiles 480px*/
 @media screen and (max-width: 480px) {
   .proyectos-civiles div[class*="item"],
