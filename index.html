@@ -184,49 +184,31 @@
       <div class="container">
         <h3>Contáctanos</h3>
         <div>
-          <form ng-submit="sendMessage()" novalidate="" name="myMessageForm">
+          <form method="post" id="register-form" novalidate="novalidate">
+
             <p>
               <label for="nombre"> Nombre(s)</label>
-              <input ng-model='messageForm.nombre' type="text" name="nombre" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.nombre.$touched" ng-cloak>
-                <span ng-show="myMessageForm.nombre.$error.required">nombre requerido.</span>
-              </div>
+              <input type="text" name="nombre">
             </p>
             <p>
               <label for="apellidos"> Apellidos</label>
-              <input ng-model='messageForm.apellidos' type="text" name="apellidos" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.apellidos.$touched" ng-cloak>
-                <span ng-show="myMessageForm.apellidos.$error.required">apellidos requeridos.</span>
-              </div>
+              <input type="text" name="apellidos">
             </p>
             <p>
               <label for="empresa">Empresa</label>
-              <input ng-model='messageForm.empresa' type="text" name="empresa" placeholder=" *Opcional">
-              <div ng-show="myMessageForm.$submitted || myMessageForm.empresa.$touched" ng-cloak>
-                <span ng-show="myMessageForm.empresa.$error.required">empresa requerida.</span>
-              </div>
+              <input type="text" name="empresa" placeholder=" *Opcional">
             </p>
             <p>
               <label for="email"> Email</label>
-              <input ng-model='messageForm.email' type="email" name="email" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.email.$touched" ng-cloak>
-                <span ng-show="myMessageForm.email.$error.required">email requerido.</span>
-                <span class="error" ng-show="myMessageForm.email.$error.email">email no válido!</span>
-              </div>
+              <input type="email" name="email">
             </p>
             <p>
               <label for="telefono"> Teléfono</label>
-              <input ng-model='messageForm.telefono' type="text" name="telefono" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.telefono.$touched" ng-cloak>
-                <span ng-show="myMessageForm.telefono.$error.required">telefono requerido.</span>
-              </div>
+              <input type="text" name="telefono">
             </p>
             <p>
               <label for="Mensaje"> Mensaje</label>
-              <textarea ng-model='messageForm.mensaje' name="mensaje" id="" cols="30" rows="10" required></textarea>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.mensaje.$touched" ng-cloak>
-                <span ng-show="myMessageForm.mensaje.$error.required">mensaje requerido.</span>
-              </div>
+              <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
             </p>
             <p>
               <input type="submit" value="ENVIAR">
@@ -282,10 +264,11 @@
     <script src="js/parallax.js"></script>
     <script src="js/scripts.js"></script>
     -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script> -->
     <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="js/ngapp.js"></script>
     <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script src="js/jqvalidate-rules.js"></script>
   </body>
 </html>
