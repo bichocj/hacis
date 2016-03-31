@@ -1,6 +1,14 @@
 <?php
 
-$contactData = json_decode(file_get_contents('php://input'), true);
+$contactData1 = json_decode(file_get_contents('php://input'), true);
+
+$contactData = array('nombre' => 'yoel',
+				 'apellidos' => 'zalas',
+				 'email' => 'zalas',
+				 'empresa' => 'zalas',
+				 'telefono' => 'zalas',
+				 'mensaje' => 'zalas'
+				);
 
 $body = '<html><body>';
 $body .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
@@ -16,17 +24,22 @@ $body .= "</body></html>";
 
 require_once 'swiftmailer-5.4.1/lib/swift_required.php';
 
-$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-  ->setUsername('para.registros321@gmail.com')
-  ->setPassword('pararegistros321');
 
-$mailer = Swift_Mailer::newInstance($transport);
 
-$message = Swift_Message::newInstance()
-  ->setSubject('Hacis Proyectos contacto')
-  ->setFrom(array('para.registros321@gmail.com' => 'Hacis Proyectos'))
-  ->setTo(array('yoel.zalas@gmail.com'))
-  ->setContentType('text/html')
-  ->setBody($body);
+try {
+	$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
+	  ->setUsername('para.registros321@gmail.com')
+	  ->setPassword('pararegistros321');
+	$mailer = Swift_Mailer::newInstance($transport);
+	$message = Swift_Message::newInstance()
+	  ->setSubject('Hacis Proyectos contacto')
+	  ->setFrom(array('para.registros321@gmail.com' => 'Hacis Proyectos'))
+	  ->setTo(array('yoel.zalas@gmail.com'))
+	  ->setContentType('text/html')
+	  ->setBody($body);
+	$result = $mailer->send($message);
 
-$result = $mailer->send($message);
+} catch (Exception $e) {
+	var_dump($e);
+}
+
