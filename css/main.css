@@ -162,7 +162,7 @@ div.hero {
       border-radius: 10px;
       transition: all 0.30s ease-in-out; }
       div.hero > div li:nth-child(2) {
-        margin-right: 25px; }
+        margin-left: 25px; }
       div.hero > div li:hover {
         background-color: #fafafa;
         border-radius: 50%; }
