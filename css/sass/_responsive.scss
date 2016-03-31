@@ -132,6 +132,9 @@ $breakpoint-small-mobile: 480px;
         margin: 25px auto 0;
         padding-right: 0; 
       }
+      br {
+        display: none;
+      }
     }
   }
 }
@@ -159,8 +162,9 @@ $breakpoint-small-mobile: 480px;
         margin-left: 0;
         text-align: center;
       }
-      [ng-show] {
+      label.error {
         width: 100%;
+        margin-left: 0;
       }
     }
   } 
