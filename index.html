@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HACIS PROYECTOS</title>
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+    </style>
     <!-- 
     <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
@@ -16,6 +21,7 @@
     <!--
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'> 
     -->
+    <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -177,42 +183,43 @@
             <p>
               <label for="nombre"> Nombre(s)</label>
               <input ng-model='messageForm.nombre' type="text" name="nombre" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.nombre.$touched">
+              <div ng-show="myMessageForm.$submitted || myMessageForm.nombre.$touched" ng-cloak>
                 <span ng-show="myMessageForm.nombre.$error.required">nombre requerido.</span>
               </div>
             </p>
             <p>
               <label for="apellidos"> Apellidos</label>
               <input ng-model='messageForm.apellidos' type="text" name="apellidos" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.apellidos.$touched">
+              <div ng-show="myMessageForm.$submitted || myMessageForm.apellidos.$touched" ng-cloak>
                 <span ng-show="myMessageForm.apellidos.$error.required">apellidos requeridos.</span>
               </div>
             </p>
             <p>
               <label for="empresa">Empresa</label>
               <input ng-model='messageForm.empresa' type="text" name="empresa" placeholder=" *Opcional">
-              <div ng-show="myMessageForm.$submitted || myMessageForm.empresa.$touched">
+              <div ng-show="myMessageForm.$submitted || myMessageForm.empresa.$touched" ng-cloak>
                 <span ng-show="myMessageForm.empresa.$error.required">empresa requerida.</span>
               </div>
             </p>
             <p>
               <label for="email"> Email</label>
               <input ng-model='messageForm.email' type="email" name="email" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.email.$touched">
+              <div ng-show="myMessageForm.$submitted || myMessageForm.email.$touched" ng-cloak>
                 <span ng-show="myMessageForm.email.$error.required">email requerido.</span>
+                <span class="error" ng-show="myMessageForm.email.$error.email">email no válido!</span>
               </div>
             </p>
             <p>
               <label for="telefono"> Teléfono</label>
               <input ng-model='messageForm.telefono' type="text" name="telefono" required>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.telefono.$touched">
+              <div ng-show="myMessageForm.$submitted || myMessageForm.telefono.$touched" ng-cloak>
                 <span ng-show="myMessageForm.telefono.$error.required">telefono requerido.</span>
               </div>
             </p>
             <p>
               <label for="Mensaje"> Mensaje</label>
               <textarea ng-model='messageForm.mensaje' name="mensaje" id="" cols="30" rows="10" required></textarea>
-              <div ng-show="myMessageForm.$submitted || myMessageForm.mensaje.$touched">
+              <div ng-show="myMessageForm.$submitted || myMessageForm.mensaje.$touched" ng-cloak>
                 <span ng-show="myMessageForm.mensaje.$error.required">mensaje requerido.</span>
               </div>
             </p>
@@ -271,6 +278,7 @@
     <script src="js/scripts.js"></script>
     -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/ngapp.js"></script>
     <script src="js/app.js"></script>
   </body>
