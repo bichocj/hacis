@@ -218,7 +218,7 @@ div.hero {
       //transition: background-color 0.25s  ease-out;
       transition: all 0.30s ease-in-out;
       &:nth-child(2) {
-        margin-right: 25px;
+        margin-left: 25px;
       }
       &:hover {
         background-color: $color-font-white;
