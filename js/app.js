@@ -29,6 +29,14 @@ window.addEventListener('scroll', function (e) {
     });    
 });
 
+/* Active items-menu  */
+var items_Menu = $('.top-menu li a');
+
+items_Menu.click( function (e) {
+    items_Menu.removeClass('active');
+    $(this).addClass('active');   
+});
+
 /* Responsive Menu */
 var contador = 1;
 $('.menu-bars').click(function () {
@@ -79,12 +87,6 @@ sr.reveal('.item-md', { duration: 800, delay: 400 });
 sr.reveal('#formContact', {duration: 800});
 
 
-/* Active items-menu  */
-var items_Menu = $('.top-menu li a');
 
-items_Menu.click( function (e) {
-    items_Menu.removeClass('active');
-    $(this).addClass('active');   
-});
 
 
