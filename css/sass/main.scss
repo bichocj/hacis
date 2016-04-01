@@ -318,7 +318,7 @@ section {
       right: 0;
       top: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.6);
       opacity: 0;
       color: $color-font-white;
       font-size: 0.9em;
@@ -329,9 +329,13 @@ section {
         position: absolute;
         bottom: 25px;
         width: 100%;
+        padding: 0 15px;
       }
       h5 {
         font-size: 1.2em;
+      }
+      p {
+        font-size: 1.1em;
       }
       &:hover {
         opacity: 1;
@@ -350,7 +354,41 @@ section {
     }
   }
 }
-  
+/*SERVICIOS*/
+#seccionServicios {
+  .lista-servicios{
+    font-size: 0.9em;
+    margin-top: 35px;
+    li {
+      @include clearfix;
+    }
+    p {
+      width: 46%;
+      float: left;
+      padding-left: 45px;
+      padding-top: 10px;
+      margin-bottom: 1em;
+      &:first-child {
+        margin-right: 8%;
+      }
+    }
+    i {
+      margin-left: -45px;
+      margin-top: -3px;
+      float: left;
+      display: block;
+      width: 35px;
+      height: 35px;
+      box-shadow: 1px 1px 1px 1px #D6DCE6;
+      border-radius: 50%;
+      overflow: hidden;
+      text-align: center;
+      line-height: 2.25;
+      background: lighten($bg-azul, 10%);
+      color: $color-font-white;
+    }
+  }
+}
 /* CONTACTO */
 #seccionContacto {
   background-color: $bg-azul;

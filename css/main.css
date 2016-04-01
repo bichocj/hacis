@@ -265,7 +265,7 @@ section h3, section h2 {
       right: 0;
       top: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.6);
       opacity: 0;
       color: #fafafa;
       font-size: 0.9em;
@@ -276,10 +276,14 @@ section h3, section h2 {
       .proyectos-civiles div[class*="item"] .overlay .content {
         position: absolute;
         bottom: 25px;
-        width: 100%; }
+        width: 100%;
+        padding: 0 15px; }
       .proyectos-electricos div[class*="item"] .overlay h5,
       .proyectos-civiles div[class*="item"] .overlay h5 {
         font-size: 1.2em; }
+      .proyectos-electricos div[class*="item"] .overlay p,
+      .proyectos-civiles div[class*="item"] .overlay p {
+        font-size: 1.1em; }
       .proyectos-electricos div[class*="item"] .overlay:hover,
       .proyectos-civiles div[class*="item"] .overlay:hover {
         opacity: 1; }
@@ -294,6 +298,37 @@ section h3, section h2 {
   .proyectos-civiles .civil-02 img,
   .proyectos-civiles .civil-03 img {
     width: 100%; }
+
+/*SERVICIOS*/
+#seccionServicios .lista-servicios {
+  font-size: 0.9em;
+  margin-top: 35px; }
+  #seccionServicios .lista-servicios li:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #seccionServicios .lista-servicios p {
+    width: 46%;
+    float: left;
+    padding-left: 45px;
+    padding-top: 10px;
+    margin-bottom: 1em; }
+    #seccionServicios .lista-servicios p:first-child {
+      margin-right: 8%; }
+  #seccionServicios .lista-servicios i {
+    margin-left: -45px;
+    margin-top: -3px;
+    float: left;
+    display: block;
+    width: 35px;
+    height: 35px;
+    box-shadow: 1px 1px 1px 1px #D6DCE6;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    line-height: 2.25;
+    background: #5a87c1;
+    color: #fafafa; }
 
 /* CONTACTO */
 #seccionContacto {
@@ -426,6 +461,20 @@ footer {
       font-size: 20px; }
   #seccionNosotros .mision {
     margin-top: 0; }
+
+  #seccionServicios .lista-servicios {
+    width: 90%;
+    margin: 35px auto 0;
+    font-size: 0.85; }
+    #seccionServicios .lista-servicios p {
+      width: 100%; }
+      #seccionServicios .lista-servicios p:first-child {
+        margin-right: 0; }
+    #seccionServicios .lista-servicios i {
+      width: 25px;
+      height: 25px;
+      line-height: 2;
+      font-size: 0.8em; }
 
   .proyectos-electricos,
   .proyectos-civiles {

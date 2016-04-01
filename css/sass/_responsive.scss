@@ -51,6 +51,26 @@ $breakpoint-small-mobile: 480px;
     }
   }
   
+  #seccionServicios {
+    .lista-servicios {
+      width: 90%;
+      margin: 35px auto 0;
+      font-size: 0.85;
+      p {
+        width: 100%;
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+      i {
+        width: 25px;
+        height: 25px;
+        line-height: 2;
+        font-size: 0.8em;
+      } 
+    }
+  }
+  
   .proyectos-electricos,
   .proyectos-civiles {
       width: 90%;

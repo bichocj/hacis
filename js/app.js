@@ -85,8 +85,3 @@ sr.reveal('.valores', { duration: 800, delay: 500 });
 sr.reveal('.item-lg', { duration: 800, delay: 200 });
 sr.reveal('.item-md', { duration: 800, delay: 400 });
 sr.reveal('#formContact', {duration: 800});
-
-
-
-
-
