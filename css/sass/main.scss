@@ -179,17 +179,19 @@ div.hero {
     vertical-align: middle;
     position: relative;
     text-align: center;
-    padding-right: 15px;
-    background: rgba(0, 0, 0, 0.15);
+    //padding-right: 15px;
+    //background: rgba(0, 0, 0, 0.15);
     .logoHacis {
-      width: 20%;
-      min-width: 200px;
+      width: 100%;
       margin: auto;
-      //background: rgba(255,255,255,.3);
+      background: rgba(255,255,255,.8);
+      //background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(237,237,237,1) 100%);
       position: relative;
       img {
-        width: 100%;
+        width: 30%;
+        min-width: 200px;
         display: block;
+        margin: 0 auto;
       }
       /*
       &::before {

@@ -84,4 +84,5 @@ sr.reveal('.vision', { duration: 800, delay: 300 });
 sr.reveal('.valores', { duration: 800, delay: 500 });
 sr.reveal('.item-lg', { duration: 800, delay: 200 });
 sr.reveal('.item-md', { duration: 800, delay: 400 });
-sr.reveal('#formContact', {duration: 800});
+sr.reveal('.item-form', {duration: 1500}, 50);
+sr.reveal('.item-servicios', {duration: 2000}, 100);
