@@ -146,8 +146,9 @@ div.hero {
       }
       */ }
       div.hero > div .logoHacis img {
-        width: 30%;
+        width: 25%;
         min-width: 200px;
+        max-width: 320px;
         display: block;
         margin: 0 auto; }
     div.hero > div ul {
@@ -424,6 +425,8 @@ footer {
       height: 35px; }
   footer .informacion i {
     margin-right: 5px; }
+  footer .informacion .fa-mobile {
+    font-size: 18px; }
   footer .mensaje {
     text-align: center;
     font-size: 1.2em;

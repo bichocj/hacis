@@ -188,8 +188,9 @@ div.hero {
       //background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(237,237,237,1) 100%);
       position: relative;
       img {
-        width: 30%;
+        width: 25%;
         min-width: 200px;
+        max-width: 320px;
         display: block;
         margin: 0 auto;
       }
@@ -500,6 +501,9 @@ footer {
   .informacion {
     i {
       margin-right: 5px;;
+    }
+    .fa-mobile {
+      font-size: 18px;
     }
   }
   .mensaje {
