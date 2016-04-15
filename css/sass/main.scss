@@ -187,6 +187,10 @@ div.hero {
       background: rgba(255,255,255,.8);
       //background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(237,237,237,1) 100%);
       position: relative;
+      h1 {
+        font-size: 0;
+        position: absolute;
+      }
       img {
         width: 25%;
         min-width: 200px;

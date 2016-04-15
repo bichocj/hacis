@@ -145,6 +145,9 @@ div.hero {
           z-index: -1;
       }
       */ }
+      div.hero > div .logoHacis h1 {
+        font-size: 0;
+        position: absolute; }
       div.hero > div .logoHacis img {
         width: 25%;
         min-width: 200px;
