@@ -16,6 +16,22 @@
         return o;
     };
 
+    var showStatus = function (statusName) {
+        statusName = statusName || false;
+        var statusArea = $( "#sendingText" );
+        var sendMessageBtn = $( "#sendMessageBtn" );
+        var message;
+        if (statusName == 'sending') {
+            message = 'Enviando su mensaje...'
+            statusArea.html(message);
+            sendMessageBtn.hide();
+        } else if (!statusName) {
+            message = '';
+            statusArea.html(message);
+            sendMessageBtn.show();
+        }
+    }
+
     var JQUERY4U = {};
 
     JQUERY4U.UTIL =
@@ -54,6 +70,7 @@
                 },
 
                 submitHandler: function(form) {
+                    showStatus('sending');
                     $.ajax({
                         type: "POST",
                         url: "mail/send-mail-service.php",
@@ -62,6 +79,7 @@
                         success: function(data) {
                             if (data == '') {
                                 registerForm[0].reset();
+                                showStatus();
                                 swal(
                                     "En buena hora!",
                                     "El mensaje ha sido enviado con éxito.",
