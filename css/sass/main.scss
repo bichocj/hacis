@@ -429,6 +429,19 @@ section {
     input {
       height: 34px;
     }
+    #sendingText {
+      display: inline-block;
+      width: 70%;
+      margin-left: 30%;
+      box-shadow: 0px 0px 3px #eee;
+      //padding: 3px 0;
+      border-radius: 4px;
+      color: $color-turquesa;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 0.9em;
+      text-shadow: 1px 1px 1px #666;
+    }
     input[type="submit"] {
       margin-left: 30%;
       background-color: $color-turquesa ;
