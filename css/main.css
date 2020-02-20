@@ -93,7 +93,7 @@ hr {
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #333;}
 /* HERO */
 div.hero {
   width: 100%;
@@ -101,7 +101,8 @@ div.hero {
   background: url("../img/bg-construccion-01.jpg") center;
   background-size: cover;
   display: table; }
-  div.hero #menu {
+
+  #menu {
     position: fixed;
     left: 0;
     right: 0;
@@ -109,35 +110,36 @@ div.hero {
     z-index: 100;
     transition: all 0.25s ease-in;
     /* Menu sticky */ }
-    div.hero #menu.fixed {
+    #menu.fixed {
       position: fixed;
       z-index: 100;
       background-color: rgba(255, 255, 255, 0.99);
       box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4); }
-  div.hero .nav-container {
+  .nav-container {
     width: 90%;
     margin: 0 auto;
-    min-height: 50px !important; }
-    div.hero .nav-container:after {
+    min-height: 50px !important;
+    border-bottom: inset }
+    .nav-container:after {
       content: "";
       display: table;
       clear: both; }
-    div.hero .nav-container .menu-bars {
+    .nav-container .menu-bars {
       display: none; }
-    div.hero .nav-container .brand {
+    .nav-container .brand {
       float: left; }
-      div.hero .nav-container .brand img {
+      .nav-container .brand img {
         display: block;
         height: 45px;
         margin-top: 3px; }
-    div.hero .nav-container ul {
+    .nav-container ul {
       float: right; }
-      div.hero .nav-container ul li {
+      .nav-container ul li {
         float: left;
         box-shadow: inset 1px 0 0 0 #efefef; }
-        div.hero .nav-container ul li:last-child {
+        .nav-container ul li:last-child {
           border-right: 1px solid #efefef; }
-      div.hero .nav-container ul a {
+      .nav-container ul a {
         display: block;
         height: 50px;
         padding: 0 1.25em;
@@ -147,11 +149,11 @@ div.hero {
         font-size: 0.75em;
         letter-spacing: 1px;
         transition: all 0.15s ease-in; }
-        div.hero .nav-container ul a:hover {
+        .nav-container ul a:hover {
           background-color: #99d9c9;
           color: #fafafa;
           text-shadow: 1px 0px 1px #333; }
-        div.hero .nav-container ul a.active {
+        .nav-container ul a.active {
           background-color: #61c4ab;
           color: #fafafa;
           text-shadow: 1px 0px 1px #333; }
@@ -222,8 +224,11 @@ section > .container {
     content: "";
     display: table;
     clear: both; }
-section h3, section h2 {
+section h3 {
   font-size: 22px;
+  margin-bottom: 1em; }
+section h4 {
+  font-size: 15px;
   margin-bottom: 1em; }
 
 /* NOSOTROS */
@@ -237,7 +242,6 @@ section h3, section h2 {
   width: 33.333%;
   float: left;
   padding: 0 65px;
-  margin-top: 35px;
   text-align: left;
   font-size: 0.9em; }
   #seccionNosotros .mision i,
@@ -264,16 +268,19 @@ section h3, section h2 {
   display: table;
   clear: both; }
 
+.proyectos-renovables,
 .proyectos-electricos,
 .proyectos-civiles {
-  width: 50%;
+  width: 33%;
   height: 100%;
   float: left; }
+  .proyectos-renovables::after,
   .proyectos-electricos:after,
   .proyectos-civiles:after {
     content: "";
     display: table;
     clear: both; }
+  .proyectos-renovables h3,
   .proyectos-electricos h3,
   .proyectos-civiles h3 {
     width: 45%;
@@ -286,18 +293,21 @@ section h3, section h2 {
     color: #efefef;
     border-radius: 12px;
     background-color: #333; }
+  .proyectos-renovables div[class*="item"],
   .proyectos-electricos div[class*="item"],
   .proyectos-civiles div[class*="item"] {
     overflow: hidden;
     float: left;
-    height: 340px;
+    height: 250px;
     border: 1px solid white;
     position: relative; }
+    .proyectos-renovables div[class*="item"] img,
     .proyectos-electricos div[class*="item"] img,
     .proyectos-civiles div[class*="item"] img {
       display: block;
       height: 100%; }
-    .proyectos-electricos div[class*="item"] .overlay,
+      .proyectos-renovables div[class*="item"] .overlay,
+      .proyectos-electricos div[class*="item"] .overlay,
     .proyectos-civiles div[class*="item"] .overlay {
       position: absolute;
       left: 0;
@@ -311,24 +321,30 @@ section h3, section h2 {
       text-align: center;
       text-shadow: 1px 0px 1px #333;
       transition: all 0.35s ease-out; }
+      .proyectos-renovables div[class*="item"] .overlay .content,
       .proyectos-electricos div[class*="item"] .overlay .content,
       .proyectos-civiles div[class*="item"] .overlay .content {
         position: absolute;
         bottom: 25px;
         width: 100%;
         padding: 0 15px; }
+      .proyectos-renovables div[class*="item"] .overlay h5,
       .proyectos-electricos div[class*="item"] .overlay h5,
       .proyectos-civiles div[class*="item"] .overlay h5 {
         font-size: 1.2em; }
+      .proyectos-renovables div[class*="item"] .overlay p,
       .proyectos-electricos div[class*="item"] .overlay p,
       .proyectos-civiles div[class*="item"] .overlay p {
         font-size: 1.1em; }
+      .proyectos-renovables div[class*="item"] .overlay:hover,
       .proyectos-electricos div[class*="item"] .overlay:hover,
       .proyectos-civiles div[class*="item"] .overlay:hover {
         opacity: 1; }
+  .proyectos-renovables .item-lg,
   .proyectos-electricos .item-lg,
   .proyectos-civiles .item-lg {
     width: 100%; }
+  .proyectos-renovables .item-md,
   .proyectos-electricos .item-md,
   .proyectos-civiles .item-md {
     width: 50%; }
@@ -341,7 +357,7 @@ section h3, section h2 {
 /*SERVICIOS*/
 #seccionLista .lista-servicios {
   font-size: 0.9em;
-  margin-top: 35px; }
+  margin-top: 25px; }
   #seccionLista .lista-servicios li:after {
     content: "";
     display: table;
@@ -366,7 +382,7 @@ section h3, section h2 {
     overflow: hidden;
     text-align: center;
     line-height: 2.25;
-    background: #5a87c1;
+    background: #5b6675;
     color: #fafafa; }
 
 /* CLIENTES */
@@ -532,11 +548,13 @@ footer {
       line-height: 2;
       font-size: 0.8em; }
 
+  .proyectos-renovables,
   .proyectos-electricos,
   .proyectos-civiles {
     width: 90%;
     float: none;
     margin: auto; }
+    .proyectos-renovables div[class*="item"],
     .proyectos-electricos div[class*="item"],
     .proyectos-civiles div[class*="item"] {
       height: 250px; }
@@ -580,9 +598,11 @@ footer {
       div.hero .nav-container ul a {
         padding-left: 30px; }
 
+  .proyectos-renovables .item-md,
   .proyectos-electricos .item-md,
   .proyectos-civiles .item-md {
     width: 100%; }
+    .proyectos-renovables .item-md img,
     .proyectos-electricos .item-md img,
     .proyectos-civiles .item-md img {
       width: 100%; }
@@ -607,6 +627,7 @@ footer {
     height: 250px; } }
 /* for small mobiles 480px*/
 @media screen and (max-width: 480px) {
+  .proyectos-renovables div[class*="item"],
   .proyectos-civiles div[class*="item"],
   .proyectos-electricos div[class*="item"] {
     height: 200px; }
