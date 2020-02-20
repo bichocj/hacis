@@ -76,13 +76,13 @@ $('.nav-container ul a').click(function (e) {
 
 /* Scroll Reveal */
 
-window.sr = ScrollReveal({ reset: true });
+// window.sr = ScrollReveal({ reset: true });
 
-sr.reveal('.hero-container', {duration: 300});
-sr.reveal('.mision', {duration: 800});
-sr.reveal('.vision', { duration: 800, delay: 300 });
-sr.reveal('.valores', { duration: 800, delay: 500 });
-sr.reveal('.item-lg', { duration: 800, delay: 200 });
-sr.reveal('.item-md', { duration: 800, delay: 400 });
-sr.reveal('.item-form', {duration: 1500}, 50);
-sr.reveal('.item-servicios', {duration: 2000}, 100);
+// sr.reveal('.hero-container', {duration: 300});
+// sr.reveal('.mision', {duration: 800});
+// sr.reveal('.vision', { duration: 800, delay: 300 });
+// sr.reveal('.valores', { duration: 800, delay: 500 });
+// sr.reveal('.item-lg', { duration: 800, delay: 200 });
+// sr.reveal('.item-md', { duration: 800, delay: 400 });
+// sr.reveal('.item-form', {duration: 1500}, 50);
+// sr.reveal('.item-servicios', {duration: 2000}, 100);

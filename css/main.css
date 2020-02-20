@@ -62,6 +62,38 @@ hr {
   width: 100%;
   margin: 0.5em 0 1em; }
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 /* HERO */
 div.hero {
   width: 100%;
@@ -70,7 +102,7 @@ div.hero {
   background-size: cover;
   display: table; }
   div.hero #menu {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     background-color: #fff;
@@ -206,7 +238,7 @@ section h3, section h2 {
   float: left;
   padding: 0 65px;
   margin-top: 35px;
-  text-align: center;
+  text-align: left;
   font-size: 0.9em; }
   #seccionNosotros .mision i,
   #seccionNosotros .vision i,
@@ -220,8 +252,11 @@ section h3, section h2 {
     margin: 0.5em 0;
     font-size: 24px; }
 
+.valores {
+  font-size: large !important;
+}
 /* PROYECTOS */
-#seccionProyectos {
+#Servicios {
   background-color: #f5f5f5; }
 
 .galeria-proyectos:after {
@@ -304,22 +339,22 @@ section h3, section h2 {
     width: 100%; }
 
 /*SERVICIOS*/
-#seccionServicios .lista-servicios {
+#seccionLista .lista-servicios {
   font-size: 0.9em;
   margin-top: 35px; }
-  #seccionServicios .lista-servicios li:after {
+  #seccionLista .lista-servicios li:after {
     content: "";
     display: table;
     clear: both; }
-  #seccionServicios .lista-servicios p {
+  #seccionLista .lista-servicios p {
     width: 46%;
     float: left;
     padding-left: 45px;
     padding-top: 10px;
     margin-bottom: 1em; }
-    #seccionServicios .lista-servicios p:first-child {
+    #seccionLista .lista-servicios p:first-child {
       margin-right: 8%; }
-  #seccionServicios .lista-servicios i {
+  #seccionLista .lista-servicios i {
     margin-left: -45px;
     margin-top: -3px;
     float: left;
@@ -334,23 +369,27 @@ section h3, section h2 {
     background: #5a87c1;
     color: #fafafa; }
 
+/* CLIENTES */
+.client {
+  align-self: center;
+}
 /* CONTACTO */
-#seccionContacto {
+#Contacto {
   background-color: #3F6DA9;
   color: #fafafa; }
-  #seccionContacto form {
+  #Contacto form {
     width: 50%;
     min-width: 550px;
     margin: 45px auto 0; }
-    #seccionContacto form p {
+    #Contacto form p {
       margin-bottom: 0.5em; }
-      #seccionContacto form p:after {
+      #Contacto form p:after {
         content: "";
         display: table;
         clear: both; }
-    #seccionContacto form label, #seccionContacto form input, #seccionContacto form textarea {
+    #Contacto form label, #Contacto form input, #Contacto form textarea {
       float: left; }
-    #seccionContacto form label {
+    #Contacto form label {
       width: 30%;
       text-transform: uppercase;
       text-align: right;
@@ -358,7 +397,7 @@ section h3, section h2 {
       padding-right: 30px;
       line-height: 2em;
       font-size: 0.8em; }
-    #seccionContacto form input, #seccionContacto form textarea {
+    #Contacto form input, #Contacto form textarea {
       width: 70%;
       border: 1px solid #eee;
       border-radius: 4px;
@@ -367,9 +406,9 @@ section h3, section h2 {
       font-size: 0.9em;
       font-family: inherit;
       box-shadow: inset 0px 0px 5px #ccc; }
-    #seccionContacto form input {
+    #Contacto form input {
       height: 34px; }
-    #seccionContacto form #sendingText {
+    #Contacto form #sendingText {
       display: inline-block;
       width: 70%;
       margin-left: 30%;
@@ -380,7 +419,7 @@ section h3, section h2 {
       text-align: center;
       font-size: 0.9em;
       text-shadow: 1px 1px 1px #666; }
-    #seccionContacto form input[type="submit"] {
+    #Contacto form input[type="submit"] {
       margin-left: 30%;
       background-color: #74CBB5;
       border: none;
@@ -388,7 +427,7 @@ section h3, section h2 {
       letter-spacing: 1px;
       color: #333;
       cursor: pointer; }
-    #seccionContacto form label.error {
+    #Contacto form label.error {
       width: 70%;
       display: block;
       margin: -5px 0 -2px 30%;
@@ -397,7 +436,7 @@ section h3, section h2 {
       text-transform: inherit;
       text-align: left;
       color: #74CBB5; }
-      #seccionContacto form label.error::first-letter {
+      #Contacto form label.error::first-letter {
         text-transform: uppercase; }
 
 /* FOOTER */
@@ -479,15 +518,15 @@ footer {
   #seccionNosotros .mision {
     margin-top: 0; }
 
-  #seccionServicios .lista-servicios {
+  #seccionLista .lista-servicios {
     width: 90%;
     margin: 35px auto 0;
     font-size: 0.85; }
-    #seccionServicios .lista-servicios p {
+    #seccionLista .lista-servicios p {
       width: 100%; }
-      #seccionServicios .lista-servicios p:first-child {
+      #seccionLista .lista-servicios p:first-child {
         margin-right: 0; }
-    #seccionServicios .lista-servicios i {
+    #seccionLista .lista-servicios i {
       width: 25px;
       height: 25px;
       line-height: 2;
@@ -548,10 +587,10 @@ footer {
     .proyectos-civiles .item-md img {
       width: 100%; }
 
-  #seccionContacto form {
+  #Contacto form {
     min-width: 400px;
     width: 90%; }
-    #seccionContacto form label {
+    #Contacto form label {
       font-size: 0.75em; }
 
   footer .footer-container > div {
@@ -572,19 +611,19 @@ footer {
   .proyectos-electricos div[class*="item"] {
     height: 200px; }
 
-  #seccionContacto form {
+  #Contacto form {
     min-width: 0;
     margin-top: 22px; }
-    #seccionContacto form label,
-    #seccionContacto form input,
-    #seccionContacto form textarea {
+    #Contacto form label,
+    #Contacto form input,
+    #Contacto form textarea {
       width: 100%;
       float: none;
       text-align: left; }
-    #seccionContacto form input[type="submit"] {
+    #Contacto form input[type="submit"] {
       margin-left: 0;
       text-align: center; }
-    #seccionContacto form label.error {
+    #Contacto form label.error {
       width: 100%;
       margin-left: 0; } }
 /**/
